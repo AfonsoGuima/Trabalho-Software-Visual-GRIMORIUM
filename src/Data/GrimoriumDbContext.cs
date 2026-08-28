@@ -13,7 +13,10 @@ namespace GrimoriumRPG.Api.Data
         public DbSet<Item> Itens {get;set;}
 
         protected override void OnModelCreating(ModelBuilder model){
-            
+            modelBuilder.Entity<Campanha>()
+                .HasOne(c => c.Mestre)
+                .WithMany()
+                .HasForeignKey(c => c.MestreId);
         }
     }
 }
