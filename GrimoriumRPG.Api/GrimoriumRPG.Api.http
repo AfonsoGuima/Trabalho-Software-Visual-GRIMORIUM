@@ -1,0 +1,6 @@
+@GrimoriumRPG.Api_HostAddress = http://localhost:5239
+
+GET {{GrimoriumRPG.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
