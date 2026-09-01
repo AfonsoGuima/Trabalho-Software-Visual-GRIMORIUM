@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrimoriumRPG.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfc3151c05372264abfd0d131013aa7e2d33ee3a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55c3ceb4a6795c015eec2524a74a8ae8857e7d90")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrimoriumRPG.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrimoriumRPG.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
