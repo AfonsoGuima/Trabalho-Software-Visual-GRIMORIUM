@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Conta - GRIMORIUM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-detail"></div>
+
+        <h1 class="title" style="font-size: 2.2rem;">GRIMORIUM</h1>
+        <h2 class="subtitle-page">Forjar Novo Aventureiro</h2>
+        
+        <form class="rpg-form" action="index.html">
+            
+            <div class="input-group">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" required placeholder="Ex: jogador_epico">
+            </div>
+
+            <div class="input-group">
+                <label for="nickname">Apelido (Display Name)</label>
+                <input type="text" id="nickname" name="nickname" required placeholder="Como será chamado nas mesas">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required placeholder="Sua senha secreta">
+            </div>
+
+            <div class="input-group">
+                <label for="confirm_password">Confirmar Senha</label>
+                <input type="password" id="confirm_password" name="confirm_password" required placeholder="Repita a senha">
+            </div>
+
+            <div class="btn-group" style="margin-top: 1.5rem;">
+                <button type="submit" class="btn btn-login">
+                    Registrar-se
+                </button>
+                
+                <!-- Link estilizado como botão para voltar -->
+                <a href="index.html" class="btn btn-register btn-link">
+                    Voltar aos Portões
+                </a>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

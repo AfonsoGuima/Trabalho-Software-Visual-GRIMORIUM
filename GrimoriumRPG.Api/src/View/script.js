@@ -1,26 +1,39 @@
 // A porta (ex: 5239) deve ser a MESMA onde a sua API está rodando no terminal
-const API_URL = "http://localhost:5239/api/Campanha"; 
+const API_URL = "http://localhost:5239/api/Campanha";
 
-async function carregarCampanhas() {
-    try {
-        // Envia a requisição GET para o C#
-        const resposta = await fetch(API_URL);
+function buscaLogin(){
+    // Intercepta o envio do formulário para simular a busca no banco de dados
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o recarregamento da página
         
-        if (!resposta.ok) {
-            throw new Error(`Erro na requisição: ${resposta.status}`);
-        }
+        const submitBtn = document.getElementById('submitBtn');
+        const loadingMsg = document.getElementById('loadingMessage');
+        
+        // Oculta o botão e mostra a mensagem de carregamento
+        submitBtn.style.display = 'none';
+        loadingMsg.style.display = 'block';
 
-        // Converte a resposta recebida em formato JSON
-        const dados = await resposta.json();
-        
-        console.log("Dados recebidos da API:", dados);
-
-        // Exemplo: Coloca o resultado formatado na tela
-        const divResultado = document.getElementById("resultado");
-        divResultado.innerHTML = `<pre>${JSON.stringify(dados, null, 2)}</pre>`;
-        
-    } catch (erro) {
-        console.error("Falha ao conectar com o backend:", erro);
-        alert("Não foi possível conectar com o servidor C#.");
-    }
+        // Simula o tempo de resposta do Banco de Dados (1.5 segundos)
+        setTimeout(() => {
+            const user = document.getElementById('username').value;
+            
+            /* 
+             * AQUI ENTRARIA O CÓDIGO DE BACKEND REAL (Fetch API / Axios).
+             * Exemplo:
+             * fetch('/api/login', { method: 'POST', body: JSON.stringify({ user, password }) })
+             * .then(response => ...)
+             */
+            
+            alert(`Busca no banco concluída. Bem-vindo de volta, ${user}! \n(Redirecionando para as mesas...)`);
+            
+            // Simula o redirecionamento para o sistema principal após o login
+            // window.location.href = 'dashboard.html'; 
+            
+            // Restaura a tela para testes
+            submitBtn.style.display = 'block';
+            loadingMsg.style.display = 'none';
+            this.reset(); // Limpa os campos
+            
+        }, 1500);
+    });
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GRIMORIUM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-detail"></div>
+
+        <h1 class="title" style="font-size: 2.2rem;">GRIMORIUM</h1>
+        <h2 class="subtitle-page">Acessar o Grimório</h2>
+        
+        <form class="rpg-form" id="loginForm">
+            
+            <div class="input-group">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" required placeholder="Seu nome de aventureiro">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required placeholder="Sua senha secreta">
+            </div>
+
+            <div class="btn-group" style="margin-top: 1.5rem;">
+                <button type="submit" class="btn btn-login" id="submitBtn">
+                    Entrar na Sessão
+                </button>
+                
+                <a href="index.html" class="btn btn-register btn-link">
+                    Voltar aos Portões
+                </a>
+            </div>
+        </form>
+
+        <!-- Mensagem de carregamento (oculta por padrão) -->
+        <div id="loadingMessage" style="display: none; margin-top: 1.5rem; color: var(--rpg-hover); font-family: 'Cinzel', serif; font-weight: bold; text-align: center;">
+            Consultando os registros antigos...
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
